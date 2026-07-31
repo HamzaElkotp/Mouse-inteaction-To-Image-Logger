@@ -1,13 +1,14 @@
 import time, os, threading
 from pynput import mouse
 from PIL import Image, ImageDraw
+from win32api import GetSystemMetrics
 
 INTERVAL:int = 10
-SCREEN_WIDTH:int = 1920
-SCREEN_HEIGHT:int = 1080
+SCREEN_WIDTH:int = GetSystemMetrics(0)
+SCREEN_HEIGHT:int = GetSystemMetrics(1)
 OUTPUT_DIR:str = "Output/HI_mouse_dataset"
-LINE_WIDTH:int = 2
-POINT_RADIUS:int = 10
+LINE_WIDTH:int = 3
+POINT_RADIUS:int = 4
 
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
