@@ -3,12 +3,12 @@ from pynput import mouse
 from PIL import Image, ImageDraw
 from win32api import GetSystemMetrics
 
-INTERVAL:int = 10
+INTERVAL:int = 30
 SCREEN_WIDTH:int = GetSystemMetrics(0)
 SCREEN_HEIGHT:int = GetSystemMetrics(1)
 OUTPUT_DIR:str = "Output/HI_mouse_dataset"
-LINE_WIDTH:int = 3
-POINT_RADIUS:int = 4
+LINE_WIDTH:int = 4
+POINT_RADIUS:int = 6
 
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
